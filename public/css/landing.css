@@ -87,7 +87,7 @@ header nav ul li:last-child{
     flex-wrap:wrap;
     height: 400px;
     width: 100%;
-    background-image: url('images/beach.JPG');
+    background-image: url('/assets/images/beach.JPG');
     background-size: cover;
     background-position: center;
 }
@@ -130,6 +130,83 @@ footer{
     color: whitesmoke;
     text-align: center;
 }
+
+/* POPUP */
+.popup_container{
+    width: 100%;
+    height: 100vh;
+    background: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.popup_btn{
+    padding:10px 60px;
+    background: #fff;
+    border:0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.popup{
+    width: 100%;
+    height: 100%;
+    background:#fff;
+    border-radius: 6px;
+    position:absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 1000;
+}
+
+.open_popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h6{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    margin-bottom: 10%;
+    background-color: #242f49;
+    color: white;
+}
+
+.popup button{
+    width: 30%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #2B4A1E;
+    color: #fff;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2)
+}
+
+input[type="text"]{
+    font-size: 100%;
+    margin-bottom: 5px;
+}
+
+input[type="password"]{
+    font-size: 100%;
+}
+
 
 /* COLOR PALETTE */
 /* Whitesmoke */
