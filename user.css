@@ -1,0 +1,257 @@
+*{
+    box-sizing:border-box;
+}
+
+/* HEADER */
+
+/* puts everything in a flexbox, sets colors + padding */
+header{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #242f49;
+    color:whitesmoke;
+    padding:2px;
+}
+/* Add dimensions for profile pic */
+.profile-pic{
+    display: inline-block;
+    margin: 0% 1%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: left;
+}
+
+h1{
+    font-size: 200%;
+    font-family:'Courier New', Courier, monospace;
+    font-kerning: 400%;
+    margin-top: 1%;
+}
+/* moves nav to the right */
+header nav{
+    margin-left: auto;
+    margin-top: auto;
+}
+
+header nav ul{
+    font-family: monospace;
+    font-size: 150%;
+    margin-bottom:8%;
+}
+/* keeps everything in line */
+header nav ul li {
+    display:inline-block;
+}
+/* keeps space in page */
+header nav ul li:last-child{
+    margin-right: 25px;
+}
+
+/*  */
+/* FEED */
+/* sets outline box for feed to appear in */
+
+.feed{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    /* background-position: center;
+    background-size: cover;
+    position: relative; */
+}
+
+/* POSTS */
+
+/* seperates each post */
+.post{
+    margin-bottom:5%;
+}
+
+/* contains each element of the post */
+/* sets colors and flexbox */
+.card{
+    background-color: #242f49;
+    color:whitesmoke;
+    font-size: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* USERNAME AND PHOTO HERE */
+.posterProfilePic{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 55%;
+    object-fit: cover;
+    margin: .5% 1%;
+}
+
+.username{
+    display: inline-block;
+    font-size: 150%;
+    margin-top: 1.7%;
+}
+
+/* FOR PHOTO IMAGES */
+
+.post-image{
+    height: 100%;
+    width: 100%;
+}
+.text-box{
+    position: relative;
+    text-align: center;
+    color:white
+}
+.geotag{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-family:monospace;
+    background-color: rgba(36,47,73,.5);
+    padding: 1%;
+    font-size:80%;
+}
+
+/* LIKE / COMMENT / TITLE OF POST */
+
+.postBanner{
+    background-color: #242f49;
+    color:whitesmoke;
+    font-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+.photobar{
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.photobar ul{
+    font-family: monospace;
+    font-size: 100%;
+}
+
+.photobar ul li {
+    display:inline-block;
+}
+
+.photobar ul li:last-child{
+    margin-right: 25px;
+}
+
+input[type="radio"]{
+    height: 150px;
+    width: 150px;
+    display:none;
+}
+
+.likeCount{
+    /* add Here */
+}
+
+.likeBtn{
+    /* ADD HERE */
+}
+
+.comment{
+    /* ADD Here */
+}
+
+/* Message + Blog */
+
+.card-blog{
+    border-color: #242F49;
+    border-style: solid;
+    border-width: 15%;
+    color:#242F49;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-box{
+    margin: 1%;
+    margin-left: 2%;
+    font-size: 100%;
+}
+
+.blog{
+    margin-top: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.date{
+    font-size: 75%;
+    text-align: right;
+    margin-top: 2%;
+}
+
+.dropDown{
+    /* padding: 1%; */
+    background-color: #242F49;
+    text-align: right;
+}
+
+/* DROP DOWN FOR COMMENTS */
+
+.hideComment {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.showComment {
+    height: auto;
+    opacity: 1;
+}
+
+
+/* COMMENTS */
+.card-comment{
+    border-color: #242F49;
+    border-style: solid;
+    border-width: 15%;
+    color:#242F49;
+}
+
+.commenter{
+    font-size: 90%;
+    margin-top: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.comment-box{
+    margin: 1%;
+    margin-left: 2%;
+}
+
+.comment{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.divider{
+    border-top: 1px solid #242F49;
+}
+
+
+footer{
+    margin-top: 15%;
+    position:fixed;
+    bottom: 0%;
+    width:100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    margin-top: 0%;
+    background-color: #242f49;
+    color: whitesmoke;
+    text-align: center;
+}
