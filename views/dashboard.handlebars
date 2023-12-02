@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/reset.css">
+    <link rel="stylesheet"  href="dashboard.css">
+   
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img class="profile-pic" src="./assets/images/placeholder.png">
+        <h1>Monica Davis</h1>
+        <nav>
+            <ul>
+                <li>
+                    <button id="addPost">Post</button>
+                </li>
+                <li>
+                    <button id="logout">Logout</button>
+                </li>
+            </ul>
+        </nav>  
+    </header>
+
+    <!-- WITH IMAGE /COMMENTS-->
+    <div class="feed">
+        <div class = "post">
+
+            <!-- USERNAME + PHOTO -->
+            <div class="card ">
+                <img class="posterProfilePic" src="./assets/images/placeholder.png">
+                <h2 class="username">Monica Davis</h2>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="card">
+                <div class="text-box">
+                    <img class="post-image" src="./assets/images/beach.JPG" alt="user's photo">
+                    <h4 class="geotag">Santa Cruz, CA, USA</h4>
+                </div>
+            </div>
+
+            <!-- LIKE / COMMENT / TITLE OF POST -->
+            <div class="postBanner">
+                <h3 class="photoTitle">My Trip to Santa Cruz</h3>
+                <div class="photobar">
+                    <ul>
+                        <li>
+                            <p class="likeCount">34</p>
+                        </li>
+                        <li>
+                            <input type="radio" class="likeBtn" name="likeBtn" value="love">
+                            <label>Like</label>
+                        </li>
+                        <li>
+                            <button class="comment">Comment</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Message + Blog -->
+            <div class="card-blog">
+                <div class="blog-box">
+                    <p class="blog" >My trip to the beautiful Santa Cruz beach. I loved learning how to surf
+                       and seeing the cool tidepools full or sea urchins and starfish.
+                       I'm excited to try biking along Henry Cowl RedWoods and visiting the
+                       Captiola Pier this weekend! Yummy salt water taffy will be filling my purse
+                       for the next week lol!
+                    </p>
+                    <p class="date">01/25/22</p>
+                </div>
+            </div>
+            <div class="dropDown">
+                <button class="revealComments">DROPDOWN</button>
+            </div>
+
+            <!-- COMMENTS -->
+            <div class="card-comment">
+                <div class="comment-box">
+                    <p class="commenter">Jeffery Montana</p>
+                    <p class="comment">
+                        So cool Monica! One of my favorite places to visit! Did you check out the Boardwalk?
+                    </p>
+                    <p class="date">01/25/22</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="comment-box">
+                    <p class="commenter">Jessica Montana</p>
+                    <p class="comment">
+                        We'll have to plan a trip with the kids next time!
+                    </p>
+                    <p class="date">01/25/22</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- POST WITH IMAGE AND NO COMMENTS -->
+        <div class = "post">
+
+            <!-- USERNAME + PHOTO -->
+            <div class="card ">
+                <img class="posterProfilePic" src="./assets/images/placeholder.png">
+                <h2 class="username">Monica Davis</h2>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="card">
+                <div class="text-box">
+                    <img class="post-image" src="./assets/images/beach.JPG" alt="user's photo">
+                    <h4 class="geotag">Santa Cruz, CA, USA</h4>
+                </div>
+            </div>
+
+            <!-- LIKE / COMMENT / TITLE OF POST -->
+            <div class="postBanner">
+                <h3 class="photoTitle">My Trip to Santa Cruz</h3>
+                <div class="photobar">
+                    <ul>
+                        <li>
+                            <p class="likeCount">34</p>
+                        </li>
+                        <li>
+                            <input type="radio" class="likeBtn" name="likeBtn" value="love">
+                            <label>Like</label>
+                        </li>
+                        <li>
+                            <button class="comment">Comment</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Message + Blog -->
+            <div class="card-blog">
+                <div class="blog-box">
+                    <p class="blog" >My trip to the beautiful Santa Cruz beach. I loved learning how to surf
+                       and seeing the cool tidepools full or sea urchins and starfish.
+                       I'm excited to try biking along Henry Cowl RedWoods and visiting the
+                       Captiola Pier this weekend! Yummy salt water taffy will be filling my purse
+                       for the next week lol!
+                    </p>
+                    <p class="date">01/25/22</p>
+                </div>
+            </div>
+            <div class="dropDown">
+                <button class="revealComments">DROPDOWN</button>
+            </div>
+        </div>
+
+        <!-- Post with IMAGE ONLY -->
+        <div class = "post">
+
+            <!-- USERNAME + PHOTO -->
+            <div class="card ">
+                <img class="posterProfilePic" src="./assets/images/placeholder.png">
+                <h2 class="username">Monica Davis</h2>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="card">
+                <div class="text-box">
+                    <img class="post-image" src="./assets/images/beach.JPG" alt="user's photo">
+                    <h4 class="geotag">Santa Cruz, CA, USA</h4>
+                </div>
+            </div>
+
+            <!-- LIKE / COMMENT / TITLE OF POST -->
+            <div class="postBanner">
+                <h3 class="photoTitle">My Trip to Santa Cruz</h3>
+                <div class="photobar">
+                    <ul>
+                        <li>
+                            <p class="likeCount">34</p>
+                        </li>
+                        <li>
+                            <input type="radio" class="likeBtn" name="likeBtn" value="love">
+                            <label>Like</label>
+                        </li>
+                        <li>
+                            <button class="comment">Comment</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropDown">
+                <button class="revealComments">DROPDOWN</button>
+            </div>
+        </div>
+
+        <!-- MESSAGE ONLY -->
+
+        <div class = "post">
+
+            <!-- USERNAME + PHOTO -->
+            <div class="card ">
+                <img class="posterProfilePic" src="./assets/images/placeholder.png">
+                <h2 class="username">Monica Davis</h2>
+            </div>
+
+            <!-- LIKE / COMMENT / TITLE OF POST -->
+            <div class="postBanner">
+                <h3 class="photoTitle">My Trip to Santa Cruz</h3>
+                <div class="photobar">
+                    <ul>
+                        <li>
+                            <p class="likeCount">34</p>
+                        </li>
+                        <li>
+                            <input type="radio" class="likeBtn" name="likeBtn" value="love">
+                            <label>Like</label>
+                        </li>
+                        <li>
+                            <button class="comment">Comment</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Message + Blog -->
+            <div class="card-blog">
+                <div class="blog-box">
+                    <p class="blog" >My trip to the beautiful Santa Cruz beach. I loved learning how to surf
+                       and seeing the cool tidepools full or sea urchins and starfish.
+                       I'm excited to try biking along Henry Cowl RedWoods and visiting the
+                       Captiola Pier this weekend! Yummy salt water taffy will be filling my purse
+                       for the next week lol!
+                    </p>
+                    <p class="date">01/25/22</p>
+                </div>
+            </div>
+            <div class="dropDown">
+                <button class="revealComments">DROPDOWN</button>
+            </div>
+        </div>
+
+        <!-- Message with Comments -->
+
+        <div class = "post">
+
+            <!-- USERNAME + PHOTO -->
+            <div class="card ">
+                <img class="posterProfilePic" src="./assets/images/placeholder.png">
+                <h2 class="username">Monica Davis</h2>
+            </div>
+
+            <!-- LIKE / COMMENT / TITLE OF POST -->
+            <div class="postBanner">
+                <h3 class="photoTitle">My Trip to Santa Cruz</h3>
+                <div class="photobar">
+                    <ul>
+                        <li>
+                            <p class="likeCount">34</p>
+                        </li>
+                        <li>
+                            <input type="radio" class="likeBtn" name="likeBtn" value="love">
+                            <label>Like</label>
+                        </li>
+                        <li>
+                            <button class="comment">Comment</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Message + Blog -->
+            <div class="card-blog">
+                <div class="blog-box">
+                    <p class="blog" >My trip to the beautiful Santa Cruz beach. I loved learning how to surf
+                       and seeing the cool tidepools full or sea urchins and starfish.
+                       I'm excited to try biking along Henry Cowl RedWoods and visiting the
+                       Captiola Pier this weekend! Yummy salt water taffy will be filling my purse
+                       for the next week lol!
+                    </p>
+                    <p class="date">01/25/22</p>
+                </div>
+            </div>
+            <div class="dropDown">
+                <button class="revealComments">DROPDOWN</button>
+            </div>
+            <!-- COMMENTS -->
+            <div class="card-comment">
+                <div class="comment-box">
+                    <p class="commenter">Jeffery Montana</p>
+                    <p class="comment">
+                        So cool Monica! One of my favorite places to visit! Did you check out the Boardwalk?
+                    </p>
+                    <p class="date">01/25/22</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="comment-box">
+                    <p class="commenter">Jessica Montana</p>
+                    <p class="comment">
+                        We'll have to plan a trip with the kids next time!
+                    </p>
+                    <p class="date">01/25/22</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   
+    <footer>
+        <h4>For Every Adventure -- For Our Wonderful World</h4>
+    </footer>
+</body>
+</html>
