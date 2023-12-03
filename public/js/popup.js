@@ -9,7 +9,6 @@ const signup = document.getElementById("signup")
 function open_popup(){
     popup.classList.add("open_popup");
     popup_background.classList.add("popup_container");
-
 }
 
 function joinPopup(){
@@ -25,7 +24,6 @@ function closeJoin(){
 function close_popup(){
     popup.classList.remove("open_popup");
     popup_background.classList.remove("popup_container");
-
 }
 
 login.addEventListener("click", ()=> {
