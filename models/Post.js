@@ -40,6 +40,11 @@ Post.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        likes: {
+            type: DataTypes.STRING,
+            
+
         }
     }, {
     sequelize,
