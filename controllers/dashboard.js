@@ -9,7 +9,10 @@ router.get('/', withAuth, async (req, res) => {
         });
         
         // this maps the user data to remove Sequelize-specific methods and get a clean JS object
-        const posts = userData.map((post) => post.get({ plain: true }));
+        const posts = userData.map((post) => {
+            post.image ? post.image = post.image.toString('base64') : null;
+            return post.get({ plain: true })
+        });
         console.log(posts);
         // renders dashboard
         res.render('posts', {
