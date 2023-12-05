@@ -22,7 +22,7 @@ Post.init(
             allowNull: false,
         },
         image: {
-            type: DataTypes.TEXT,
+            type: DataTypes.BLOB('medium'),
             //change this if we want to also have the option to do only comments
             allowNull: true,
         },

@@ -1,11 +1,21 @@
 const router = require('express').Router();
 const { Post, User } = require('../../models');
+const multer = require('multer')
 
-router.get('/', async (req, res) => {
+//multer setup
+const storage = multer.memoryStorage();
+const upload = multer({
+    storage,
+});
+
+router.post('/', upload.single('image'), async (req, res) => {
     try {
-        const postData = await Comment.findAll();
-        res.status(200).json(postData);
+        const fileBuffer = req.file.buffer;
+        const { title, description, date, location } = req.body;
+        const postData = await Post.create({ title, description, date, location, image: fileBuffer, user_id: req.session.user_id });
+        res.status(200).json('done');
     } catch (err) {
+        console.log(err.message);
         res.status(500).json(err);
     }
 });
