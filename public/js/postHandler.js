@@ -1,12 +1,13 @@
-const googleScript = 
+
 
 const postFormHandler = async (event) => {
     
     event.preventDefault();
 
-    const postTitle = document.querySelector('#post-title').value.trim();
-    const postBody = document.querySelector('#post-body').value.trim();
-    const postLocation = document.querySelector('#post-location').value.trim();
+    const title = document.querySelector('#titlePost').value.trim();
+    const description = document.querySelector('#description').value.trim();
+    const location = document.querySelector('#location').value.trim();
+    const date = document.querySelector('#date').value.trim();ç
 
     if (postTitle && postBody && postLocation) {
         const response = await fetch('/api/projects', {
