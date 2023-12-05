@@ -2,18 +2,18 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/loginAuth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        const userData = await User.findAll({
-            attributes: { exclude: ['password']},
-        });
+        // const userData = await User.findAll({
+        //     attributes: { exclude: ['password']},
+        // });
         
-        // this maps the user data to remove Sequelize-specific methods and get a clean JS object
-        const posts = userData.map((post) => post.get({ plain: true }));
+        // // this maps the user data to remove Sequelize-specific methods and get a clean JS object
+        // const posts = userData.map((post) => post.get({ plain: true }));
 
         //renders dashboard
         res.render('homepage', {
-            posts,
+            // posts,
             logged_in: req.session.logged_in,
         });
     } catch (err) {
