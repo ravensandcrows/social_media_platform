@@ -1,0 +1,72 @@
+<div class="feed">
+    {{#each posts}}
+    <div class="post">
+
+        <!-- USERNAME + PHOTO -->
+        <div class="card ">
+            <h2 class="username">{{user.username}}</h2>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="card">
+            <div class="text-box">
+                <img class="post-image" src="{{image}}" alt="user's photo">
+                <h4 class="geotag">{{location}}</h4>
+            </div>
+        </div>
+
+        <!-- LIKE / COMMENT / TITLE OF POST -->
+        <div class="postBanner">
+            <h3 class="photoTitle">{{title}}</h3>
+            <div class="photobar">
+                <ul>
+                    <li>
+                        <p class="likeCount">34</p>
+                    </li>
+                    <li>
+                        <input type="radio" class="likeBtn" name="likeBtn" value="love">
+                        <label>Like</label>
+                    </li>
+                    <li>
+                        <button class="comment">Comment</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Message + Blog -->
+        <div class="card-blog">
+            <div class="blog-box">
+                <p class="blog">{{description}}
+                </p>
+                {{!-- add date formatter --}}
+                <p class="date">{{date}}</p>
+            </div>
+        </div>
+        <div class="dropDown">
+            <button class="revealComments">DROPDOWN</button>
+        </div>
+
+
+        <!-- COMMENTS -->
+        <div class="card-comment">
+            <div class="comment-box">
+                <p class="commenter">Jeffery Montana</p>
+                <p class="comment">
+                    So cool Monica! One of my favorite places to visit! Did you check out the Boardwalk?
+                </p>
+                <p class="date">01/25/22</p>
+                <div class="divider"></div>
+            </div>
+            <div class="comment-box">
+                <p class="commenter">Jessica Montana</p>
+                <p class="comment">
+                    We'll have to plan a trip with the kids next time!
+                </p>
+                <p class="date">01/25/22</p>
+            </div>
+        </div>
+    </div>
+{{/each}}
+
+</div>

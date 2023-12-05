@@ -1,0 +1,29 @@
+<!-- Post POPUP -->
+<section>
+    <div class="popup" id="postPopup">
+        <h6>Share Your Trip!</h6>
+        <form id="postForm">
+            <label for="titlePost">Title of Post:</label>
+            <input type="text" id="titlePost" name="titlePost" required>
+            <br>
+            <div enctype="multipart/form-data" >
+                <label for="img-up">Upload image here:</label>
+                <input name="image" type="file" id="myFile" accept="image/*">
+            </div>
+            <br>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <br>
+            {{!-- Location --}}
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <br>
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" required>
+            <br>
+            <button type="submit" onclick="close_popup()">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script src="/js/postHandler.js"></script>

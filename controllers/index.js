@@ -4,5 +4,6 @@ const homeRoutes = require('./homeRoutes');
 
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
+router.use('/dashboard', require('./dashboard.js'));
 
 module.exports = router;
