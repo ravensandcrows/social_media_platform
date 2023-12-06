@@ -1,10 +1,14 @@
 let isLiked = false;
-const post_id = document.querySelector('#post_id').value
-let likeBtnEl = document.querySelector('.likeBtn')
+
+let likeBtnEl = document.querySelectorAll('.likeBtn')
 
 async function liked(event) {
-  let likeCount = parseInt(document.querySelector(".likeCount").textContent);
+  // let likeCount = parseInt(document.querySelector(".likeCount").textContent);
+  let likeCount = event.target.parentElement.
+    previousElementSibling.children[0].textContent
+  console.log(likeCount);
   likeCount++
+  const post_id = event.target.getAttribute("id")
   const response = await fetch(`/api/posts/${post_id}`, {
     method: 'PUT',
     body: JSON.stringify({ likes: likeCount }),
@@ -18,7 +22,10 @@ async function liked(event) {
   }
 };
 
-likeBtnEl.addEventListener('click', liked)
+likeBtnEl.forEach(function (likeBtn) {
+  likeBtn.addEventListener('click', liked)
+})
+
 
 
 function toggleLike() {
