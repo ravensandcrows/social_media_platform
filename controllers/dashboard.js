@@ -17,6 +17,7 @@ router.get('/', withAuth, async (req, res) => {
         // renders dashboard
         res.render('posts', {
             layout: "dashboard",
+            username: req.session.username,
             posts,
             logged_in: req.session.logged_in,
         });

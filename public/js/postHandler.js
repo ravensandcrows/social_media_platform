@@ -1,5 +1,3 @@
-
-
 const postFormHandler = async (event) => {
     
     event.preventDefault();
