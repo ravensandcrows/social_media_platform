@@ -1,8 +1,9 @@
 const express = require('express');
 const session = require('express-session');
 const logger = require('morgan');
+const helpers = require('./utils/helpers');
 const routes = require('./controllers');
-const { engine } = require('express-handlebars');
+const expresshbs = require('express-handlebars');
 const path = require('path');
 
 const sequelize = require('./config/connection');
@@ -28,7 +29,8 @@ const sess = {
     })
 };
 
-app.engine('handlebars', engine());
+const handlebars = expresshbs.create({ helpers });
+app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
