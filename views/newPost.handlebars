@@ -6,7 +6,7 @@
             <label for="titlePost">Title of Post:</label>
             <input type="text" id="titlePost" name="titlePost" required>
             <br>
-            <div enctype="multipart/form-data" >
+            <div enctype="multipart/form-data">
                 <label for="img-up">Upload image here:</label>
                 <input name="image" type="file" id="myFile" accept="image/*">
             </div>
@@ -17,6 +17,11 @@
             {{!-- Location --}}
             <label for="location">Location:</label>
             <input type="text" id="location" name="location" required>
+            <div id="infowindow-content">
+                <span id="place-name" class="title"></span>
+                <br>
+                <span id="place-address"></span>
+            </div>
             <br>
             <label for="date">Date:</label>
             <input type="text" id="date" name="date" required>
@@ -26,4 +31,8 @@
     </div>
 </section>
 
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBYQDEG-LyV8XTTYaEcNeEaR19ugRpFsk&libraries=places&callback=initMap">
+</script>
 <script src="/js/postHandler.js"></script>
+<script src="/js/autocomplete.js"></script>
