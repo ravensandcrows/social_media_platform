@@ -6,7 +6,7 @@
         <div class="card ">
             <h2 class="username">{{user.username}}</h2>
         </div>
-        <input type="hidden" id="post_id" value="{{id}}" />
+        
         <!-- IMAGE -->
         <div class="card">
             <div class="text-box">
@@ -29,7 +29,7 @@
                     </li>
 
                     <li>
-                        <button id="comment-button" class="comment">Comment</button>
+                        <button id="comment-button" class="comment-button">Comment</button>
                     </li>
                 </ul>
             </div>
@@ -38,12 +38,13 @@
         <!-- Message + Blog -->
         <div class="card-blog">
             <div class="blog-box">
-                <p class="blog">{{description}}
-                </p>
+                <p class="blog">{{description}}</p>
                 {{!-- add date formatter --}}
                 <p class="date">{{format_date date}}</p>
             </div>
         </div>
+        <input type="hidden" id="post_id" value="{{id}}" />
+        <textarea id="comment-body"></textarea>
         <div class="dropDown">
             <button class="revealComments">DROPDOWN</button>
         </div>
@@ -62,11 +63,9 @@
         {{/each}}
         {{/if}}
     </div>
-
     {{/each}}
 
 </div>
 
 <script src="/js/commentHandler.js"></script>
-
 <script src="/js/likeCounter.js"></script>

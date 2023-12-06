@@ -25,18 +25,23 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
+  const minPasswordLength = 7;
 
   if (username && email && password) {
+    if (password.length < minPasswordLength) {
+      alert(`Password must be at least ${minPasswordLength} characters long!`)
+    }
+
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+  
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to signup');
+      alert('Please try again!');
     }
   }
 };
