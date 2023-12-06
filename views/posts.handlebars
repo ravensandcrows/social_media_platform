@@ -6,7 +6,7 @@
         <div class="card ">
             <h2 class="username">{{user.username}}</h2>
         </div>
-
+        <input type="hidden" id="post_id" value="{{id}}" />
         <!-- IMAGE -->
         <div class="card">
             <div class="text-box">
@@ -21,12 +21,13 @@
             <div class="photobar">
                 <ul>
                     <li>
-                        <p class="likeCount">34</p>
+                    
+                        <p class="likeCount">{{likes}}</p>
                     </li>
                     <li>
-                        <input type="radio" class="likeBtn" name="likeBtn" value="love">
-                        <label>Like</label>
+                        <button class="likeBtn" onclick="toggleLike()">&#9829</button>
                     </li>
+
                     <li>
                         <button id="comment-button" class="comment">Comment</button>
                     </li>
@@ -47,24 +48,18 @@
             <button class="revealComments">DROPDOWN</button>
         </div>
 
-        {{#if post.Comment}}
+        {{#if comments}}
+        {{#each comments}}
         <!-- COMMENTS -->
         <div class="card-comment">
             <div class="comment-box">
                 <p class="commenter">{{user.username}}</p>
-                {{!-- <p class="commenter">Jeffery Montana</p>  --}}
-                <input type="hidden" name="post_id" value="{{post.id}}" />
-                <p class="comment">{{comment.description}}</p>
+                <p class="comment">{{description}}</p>
                 <p class="date">{{format_date date}}</p>
                 <div class="divider"></div>
             </div>
-            <div class="comment-box">
-                <p class="commenter">{{user.username}}</p>
-                {{!-- <p class="commenter">Jessica Montana</p> --}}
-                <p class="comment"></p>
-                <p class="date">{{format_date date}}</p>
-            </div>
         </div>
+        {{/each}}
         {{/if}}
     </div>
 
@@ -73,3 +68,5 @@
 </div>
 
 <script src="/js/commentHandler.js"></script>
+
+<script src="/js/likeCounter.js"></script>

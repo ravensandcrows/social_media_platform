@@ -26,12 +26,28 @@ router.get('/:id', async (req, res) => {
             include: [{ model: User }]
         });
         if (!postData) {
-            res.status(404).json({ message: 'No comment found'})
+            res.status(404).json({ message: 'No comment found' })
             return;
         }
         res.status(200).json(postData);
     } catch (err) {
         res.status(500).json(err)
+    }
+});
+
+router.put('/:id', async (req, res) => {
+    try {
+        const post = await Post.update(
+            req.body,
+            {
+                where: {
+                    id: req.params.id,
+                },
+            }
+        );
+        res.status(200).json(post);
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 

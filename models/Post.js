@@ -47,6 +47,10 @@ Post.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        likes: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0
         }
     }, {
     sequelize,

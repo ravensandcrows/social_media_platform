@@ -1,19 +1,37 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
 /* HEADER */
 
+.likeBtn {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 200%;
+    color: whitesmoke;
+}
+
+.likeBtn:hover {
+    color: #B0506D;
+}
+
+.liked {
+    color: #B0506D;
+}
+
 /* puts everything in a flexbox, sets colors + padding */
-header{
+header {
     display: flex;
     flex-wrap: wrap;
     background-color: #242f49;
-    color:whitesmoke;
-    padding:2px;
+    color: whitesmoke;
+    padding: 2px;
 }
+
 /* Add dimensions for profile pic */
-.profile-pic{
+.profile-pic {
     display: inline-block;
     margin: 0% 1%;
     width: 50px;
@@ -23,29 +41,32 @@ header{
     display: left;
 }
 
-h1{
+h1 {
     font-size: 200%;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-kerning: 400%;
     margin-top: 1%;
 }
+
 /* moves nav to the right */
-header nav{
+header nav {
     margin-left: auto;
     margin-top: auto;
 }
 
-header nav ul{
+header nav ul {
     font-family: monospace;
     font-size: 150%;
-    margin-bottom:8%;
+    margin-bottom: 8%;
 }
+
 /* keeps everything in line */
 header nav ul li {
-    display:inline-block;
+    display: inline-block;
 }
+
 /* keeps space in page */
-header nav ul li:last-child{
+header nav ul li:last-child {
     margin-right: 25px;
 }
 
@@ -53,7 +74,7 @@ header nav ul li:last-child{
 /* FEED */
 /* sets outline box for feed to appear in */
 
-.feed{
+.feed {
     padding: 40px;
     text-align: center;
     width: 100%;
@@ -66,22 +87,22 @@ header nav ul li:last-child{
 /* POSTS */
 
 /* seperates each post */
-.post{
-    margin-bottom:5%;
+.post {
+    margin-bottom: 5%;
 }
 
 /* contains each element of the post */
 /* sets colors and flexbox */
-.card{
+.card {
     background-color: #242f49;
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 75%;
     display: flex;
     flex-wrap: wrap;
 }
 
 /* USERNAME AND PHOTO HERE */
-.posterProfilePic{
+.posterProfilePic {
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -90,7 +111,7 @@ header nav ul li:last-child{
     margin: .5% 1%;
 }
 
-.username{
+.username {
     display: inline-block;
     font-size: 150%;
     margin-top: 1.7%;
@@ -98,102 +119,104 @@ header nav ul li:last-child{
 
 /* FOR PHOTO IMAGES */
 
-.post-image{
+.post-image {
     height: 100%;
     width: 100%;
 }
-.text-box{
+
+.text-box {
     position: relative;
     text-align: center;
-    color:white
+    color: white
 }
-.geotag{
+
+.geotag {
     position: absolute;
     top: 0%;
     right: 0%;
-    font-family:monospace;
-    background-color: rgba(36,47,73,.5);
+    font-family: monospace;
+    background-color: rgba(36, 47, 73, .5);
     padding: 1%;
-    font-size:80%;
+    font-size: 80%;
 }
 
 /* LIKE / COMMENT / TITLE OF POST */
 
-.postBanner{
+.postBanner {
     background-color: #242f49;
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
 }
 
-.photobar{
+.photobar {
     margin-left: auto;
     margin-top: auto;
 }
 
-.photobar ul{
+.photobar ul {
     font-family: monospace;
     font-size: 100%;
 }
 
 .photobar ul li {
-    display:inline-block;
+    display: inline-block;
 }
 
-.photobar ul li:last-child{
+.photobar ul li:last-child {
     margin-right: 25px;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     height: 150px;
     width: 150px;
-    display:none;
+    display: none;
 }
 
-.likeCount{
+.likeCount {
     /* add Here */
 }
 
-.likeBtn{
+.likeBtn {
     /* ADD HERE */
 }
 
-.comment{
+.comment {
     /* ADD Here */
 }
 
 /* Message + Blog */
 
-.card-blog{
+.card-blog {
     border-color: #242F49;
     border-style: solid;
     border-width: 15%;
-    color:#242F49;
+    color: #242F49;
     display: flex;
     flex-wrap: wrap;
 }
 
-.blog-box{
+.blog-box {
     margin: 1%;
     margin-left: 2%;
     font-size: 100%;
 }
 
-.blog{
+.blog {
     margin-top: 2%;
     text-align: justify;
     text-justify: inter-word;
 }
 
-.date{
+.date {
     font-size: 75%;
     text-align: right;
     margin-top: 2%;
 }
 
-.dropDown{
+.dropDown {
     /* padding: 1%; */
     background-color: #242F49;
     text-align: right;
@@ -215,41 +238,41 @@ input[type="radio"]{
 
 
 /* COMMENTS */
-.card-comment{
+.card-comment {
     border-color: #242F49;
     border-style: solid;
     border-width: 15%;
-    color:#242F49;
+    color: #242F49;
 }
 
-.commenter{
+.commenter {
     font-size: 90%;
     margin-top: 2%;
     text-align: justify;
     text-justify: inter-word;
 }
 
-.comment-box{
+.comment-box {
     margin: 1%;
     margin-left: 2%;
 }
 
-.comment{
+.comment {
     text-align: center;
     margin-top: 2%;
 }
 
-.divider{
+.divider {
     border-top: 1px solid #242F49;
 }
 
 
-footer{
+footer {
     margin-top: 15%;
-    position:fixed;
+    position: fixed;
     bottom: 0%;
-    width:100%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 0%;
     background-color: #242f49;
     color: whitesmoke;
