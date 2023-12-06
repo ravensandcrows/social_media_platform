@@ -29,7 +29,7 @@
                     </li>
 
                     <li>
-                        <button id="comment-button" class="comment">Comment</button>
+                        <button id="comment-button" class="comment-button">&#9993</button>
                     </li>
                 </ul>
             </div>
@@ -45,13 +45,12 @@
             </div>
         </div>
         <div class="dropDown">
-            <button class="revealComments">DROPDOWN</button>
+            <button class="dropDownBtn" onclick="toggleComments()">&#9776;</button>
         </div>
-
         {{#if comments}}
         {{#each comments}}
         <!-- COMMENTS -->
-        <div class="card-comment">
+        <div class="hide card-comment">
             <div class="comment-box">
                 <p class="commenter">{{user.username}}</p>
                 <p class="comment">{{description}}</p>

@@ -4,23 +4,6 @@
 
 /* HEADER */
 
-.likeBtn {
-    background-color: transparent;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 200%;
-    color: whitesmoke;
-}
-
-.likeBtn:hover {
-    color: #B0506D;
-}
-
-.liked {
-    color: #B0506D;
-}
-
 /* puts everything in a flexbox, sets colors + padding */
 header {
     display: flex;
@@ -175,16 +158,41 @@ input[type="radio"] {
     display: none;
 }
 
-.likeCount {
-    /* add Here */
-}
-
 .likeBtn {
-    /* ADD HERE */
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 200%;
+    color: whitesmoke;
 }
 
-.comment {
-    /* ADD Here */
+.likeBtn:hover {
+    color: #B0506D;
+}
+
+.liked {
+    color: #B0506D;
+}
+
+.likeCount{
+    font-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.commentBtn{
+    font-size: 300%;
+    cursor: pointer;
+    border:none;
+    margin-right: 1%;
+    background-color: transparent;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+
+.commentBtn:active{
+    color:cornflowerblue;
 }
 
 /* Message + Blog */
@@ -223,6 +231,26 @@ input[type="radio"] {
 }
 
 /* DROP DOWN FOR COMMENTS */
+
+.dropDown{
+    background-color: #242F49;
+    text-align: right;
+}
+
+.dropDownBtn{
+    cursor: pointer;
+    border:none;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    background-color: transparent;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
 
 .hideComment {
     height: 0;
