@@ -10,7 +10,7 @@
         <!-- IMAGE -->
         <div class="card">
             <div class="text-box">
-                <img class="post-image" alt="user's photo" src="data:image/png;base64,{{image}}"/>
+                <img class="post-image" alt="user's photo" src="data:image/png;base64,{{image}}" />
                 <h4 class="geotag">{{location}}</h4>
             </div>
         </div>
@@ -28,7 +28,7 @@
                         <label>Like</label>
                     </li>
                     <li>
-                        <button class="comment">Comment</button>
+                        <button id="comment-button" class="comment">Comment</button>
                     </li>
                 </ul>
             </div>
@@ -40,33 +40,36 @@
                 <p class="blog">{{description}}
                 </p>
                 {{!-- add date formatter --}}
-                <p class="date">{{date}}</p>
+                <p class="date">{{format_date date}}</p>
             </div>
         </div>
         <div class="dropDown">
             <button class="revealComments">DROPDOWN</button>
         </div>
 
-
+        {{#if post.Comment}}
         <!-- COMMENTS -->
-        {{!-- <div class="card-comment">
+        <div class="card-comment">
             <div class="comment-box">
-                <p class="commenter">Jeffery Montana</p>
-                <p class="comment">
-                    So cool Monica! One of my favorite places to visit! Did you check out the Boardwalk?
-                </p>
-                <p class="date">01/25/22</p>
+                <p class="commenter">{{user.username}}</p>
+                {{!-- <p class="commenter">Jeffery Montana</p>  --}}
+                <input type="hidden" name="post_id" value="{{post.id}}" />
+                <p class="comment">{{comment.description}}</p>
+                <p class="date">{{format_date date}}</p>
                 <div class="divider"></div>
             </div>
             <div class="comment-box">
-                <p class="commenter">Jessica Montana</p>
-                <p class="comment">
-                    We'll have to plan a trip with the kids next time!
-                </p>
-                <p class="date">01/25/22</p>
+                <p class="commenter">{{user.username}}</p>
+                {{!-- <p class="commenter">Jessica Montana</p> --}}
+                <p class="comment"></p>
+                <p class="date">{{format_date date}}</p>
             </div>
         </div>
-    </div> --}}
-{{/each}}
+        {{/if}}
+    </div>
+
+    {{/each}}
 
 </div>
+
+<script src="/js/commentHandler.js"></script>
