@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/reset.css">
-    <link rel="stylesheet"  href="dashboard.css">
+    <link rel="stylesheet"  href="./public/css/dashboard.css">
    
     <title>Document</title>
 </head>
@@ -74,11 +74,11 @@
                 </div>
             </div>
             <div class="dropDown">
-                <button class="revealComments">DROPDOWN</button>
+                <button class="dropDownBtn" onclick="toggleComments()">&#9776;</button>
             </div>
 
             <!-- COMMENTS -->
-            <div class="card-comment">
+            <div class="hide card-comment">
                 <div class="comment-box">
                     <p class="commenter">Jeffery Montana</p>
                     <p class="comment">
