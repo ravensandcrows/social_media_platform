@@ -1,21 +1,24 @@
 const commentFormHandler = async (event) => {
     event.preventDefault();
 
-    const commentData = document.querySelector('p[name="comment"]').value.trim();
+    const description = document.querySelector('#comment-body').value.trim();
     const post_id = document.querySelector('#post_id').value;
 
-    if (commentData) {
+    console.table({ post_id, description });
+
+    if (description && post_id) {
         const response = await fetch('/api/comments', {
             method: 'POST',
-            body: JSON.stringify({ post_id, commentData }),
+            body: JSON.stringify({ post_id, description }),
             headers: { 'Content-Type': 'application/json' },
         })
-    }
 
-    if (response.ok) {
-        document.location.reload();
-    } else {
-        alert('Please try again');
+        if (response.ok) {
+            alert('Looks like this worked!');
+            document.location.reload();
+        } else {
+            alert('Please try again');
+        }
     }
 };
 

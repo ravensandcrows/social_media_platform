@@ -12,12 +12,13 @@ Comment.init(
             autoIncrement: true,
         },
         description: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         date: {
             type: DataTypes.DATE,
             allowNull: false,
+            defaultValue: DataTypes.NOW
         },
     }, {
     sequelize,
