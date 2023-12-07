@@ -23,13 +23,11 @@
                         <p class="likeCount">{{likes}}</p>
                     </li>
                     <li>
-                        <button class="likeBtn"
-                        id = "{{id}}"
-                        onclick="toggleLike()">&#9829</button>
+                        <button class="likeBtn" id="{{id}}" onclick="toggleLike()">&#9829</button>
                     </li>
 
                     <li>
-                        <button id="comment-button" class="comment-button">&#9993</button>
+                        <button id={{id}} class="comment-button">&#9993</button>
                     </li>
                 </ul>
             </div>
@@ -44,27 +42,27 @@
             </div>
         </div>
         <input type="hidden" id="post_id" value="{{id}}" />
-        <textarea id="comment-body"></textarea>
+        <textarea id="comment-body" class="test" data-description="{{id}}"></textarea>
         <div class="dropDown">
-            <button class="dropDownBtn" onclick="toggleComments()">&#9776;</button>
+            <button class="dropDownBtn" id="{{id}}" onclick="toggleComments()">&#9776;</button>
         </div>
 
-        {{#if comments}}
-        {{#each comments}}
-        <!-- COMMENTS -->
-        <div class="hide card-comment">
+        <div id="card-comment" class="hide card-comment">
+            {{#each comments}}
+            <!-- COMMENTS -->
             <div class="comment-box">
                 <p class="commenter">{{user.username}}</p>
                 <p class="comment">{{description}}</p>
                 <p class="date">{{format_date date}}</p>
                 <div class="divider"></div>
             </div>
+            {{/each}}
         </div>
-        {{/each}}
-        {{/if}}
+
     </div>
     {{/each}}
 </div>
 
 <script src="/js/commentHandler.js"></script>
 <script src="/js/likeCounter.js"></script>
+<script src="/js/dropdown.js"></script>

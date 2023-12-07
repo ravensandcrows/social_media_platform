@@ -9,5 +9,3 @@ function initAutoComplete() {
         });
     });
 };
-
-initAutoComplete();

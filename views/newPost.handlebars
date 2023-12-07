@@ -1,21 +1,22 @@
 <!-- Post POPUP -->
 <section>
     <div class="popup" id="postPopup">
-        <h6>Share Your Trip!</h6>
+        {{!-- <h6>Share Your Trip!</h6> --}}
         <form id="postForm">
-            <label for="titlePost">Title of Post:</label>
+            <h6>Share Your Trip!</h6>
+            <label for="titlePost">Choose a title for your post:</label>
             <input type="text" id="titlePost" name="titlePost" required>
             <br>
             <div enctype="multipart/form-data">
-                <label for="img-up">Upload image here:</label>
+                <label for="img-up">Upload your pictures here!</label>
                 <input name="image" type="file" id="myFile" accept="image/*">
             </div>
             <br>
-            <label for="description">Description:</label>
+            <label for="description">Share your most memorable moments:</label>
             <input type="text" id="description" name="description" required>
             <br>
             {{!-- Location --}}
-            <label for="location">Location:</label>
+            <label for="location">Where did you go?</label>
             <input type="text" id="location" name="location" required>
             <div id="infowindow-content">
                 <span id="place-name" class="title"></span>
@@ -23,7 +24,7 @@
                 <span id="place-address"></span>
             </div>
             <br>
-            <label for="date">Date:</label>
+            <label for="date">When did visit this place?</label>
             <input type="text" id="date" name="date" required>
             <br>
             <button type="submit" onclick="close_popup()">Submit</button>
