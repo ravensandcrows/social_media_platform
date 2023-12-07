@@ -27,7 +27,7 @@
                     </li>
 
                     <li>
-                        <button id={{id}} class="comment-button">&#9993</button>
+                        <button id={{id}} class="comment-button" onclick="showTextarea()">&#9993</button>
                     </li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <input type="hidden" id="post_id" value="{{id}}" />
-        <textarea id="comment-body" class="test" data-description="{{id}}"></textarea>
+        <textarea id="comment-body" class="myTextarea test" data-description="{{id}}" style="display:none;"></textarea>
         <div class="dropDown">
             <button class="dropDownBtn" id="{{id}}" onclick="toggleComments()">&#9776;</button>
         </div>
@@ -66,3 +66,4 @@
 <script src="/js/commentHandler.js"></script>
 <script src="/js/likeCounter.js"></script>
 <script src="/js/dropdown.js"></script>
+<script src="/js/showCommentbox.js"></script>
