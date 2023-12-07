@@ -1,5 +1,5 @@
 const postFormHandler = async (event) => {
-    
+
     event.preventDefault();
 
     const title = document.querySelector('#titlePost').value.trim();
@@ -18,7 +18,6 @@ const postFormHandler = async (event) => {
 
 
         if (allowedExtensions.indexOf(fileExtension) === -1) {
-
             alert("Please upload a valid image file (jpg, jpeg, png, gif).");
             return;
         }
@@ -26,7 +25,6 @@ const postFormHandler = async (event) => {
         // Append the image file to FormData
         formData.append('image', fileInput.files[0]);
     } else {
-
         alert("Please select an image file.");
         return;
     };
@@ -38,16 +36,16 @@ const postFormHandler = async (event) => {
 
     for (const value of formData.entries()) { console.log(value); }
 
-        const response = await fetch('/api/posts', {
-            method: 'POST',
-            body: formData,
-        });
+    const response = await fetch('/api/posts', {
+        method: 'POST',
+        body: formData,
+    });
 
-        if (response.ok) {
-            document.location.assign('/dashboard');
-        } else {
-            alert('Post could not be created')
-        }
-    };
+    if (response.ok) {
+        document.location.assign('/dashboard');
+    } else {
+        alert('Post could not be created')
+    }
+};
 
-    document.querySelector('#postForm').addEventListener('submit', postFormHandler)
+document.querySelector('#postForm').addEventListener('submit', postFormHandler)

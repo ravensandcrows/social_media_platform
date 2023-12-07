@@ -1,5 +1,4 @@
 let isLiked = false;
-
 let likeBtnEl = document.querySelectorAll('.likeBtn')
 
 async function liked(event) {
@@ -25,8 +24,6 @@ async function liked(event) {
 likeBtnEl.forEach(function (likeBtn) {
   likeBtn.addEventListener('click', liked)
 })
-
-
 
 function toggleLike() {
   isLiked = !isLiked;

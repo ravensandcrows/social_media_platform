@@ -68,8 +68,18 @@ header nav ul li:last-child {
 }
 
 /* POSTS */
+#postForm {
+    padding: 40px;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    border: 10px 20px;
+    color: #242f49;
+    border-color: solid #242f49 ;
+}
 
-/* seperates each post */
+/* separates each post */
 .post {
     margin-bottom: 5%;
 }
@@ -269,6 +279,11 @@ input[type="radio"] {
 
 
 /* COMMENTS */
+#comment-body {
+    width: 100%;
+    height: 100%;
+}
+
 .card-comment {
     border-color: #242F49;
     border-style: solid;
