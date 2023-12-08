@@ -5,9 +5,9 @@ const withAuth = require('../utils/loginAuth');
 router.get('/', withAuth, async (req, res) => {
     try {
         const userData = await Post.findAll({
-        include: [User, {model: Comment, include: [User]}]
+            include: [User, { model: Comment, include: [User] }]
         });
-        
+
         // this maps the user data to remove Sequelize-specific methods and get a clean JS object
         const posts = userData.map((post) => {
             post.image ? post.image = post.image.toString('base64') : null;

@@ -14,14 +14,15 @@ To use the application, users will note that they are directed to a landing site
 
 ## Credits
 
-Megan Meyers and Diarmuid Murphy for continued guidance through the entire project, including (but not limited to) routing issues with Handlebars, usage of Multer middleware for multipart/form data in file uploading user images, and creation of post functionality. Handlebars, MySQL, Express, and Sequelize for middleware used throughout the entire project functionality. 
+Megan Meyers and Diarmuid Murphy for continued guidance through the entire project, including (but not limited to) routing issues with Handlebars, usage of Multer middleware for multipart/form data in file uploading user images, and creation of post functionality. Handlebars, MySQL, Express, and Sequelize for middleware used throughout the entire project functionality.
+Authors: Blackstorm, Kali | Meroi, Irina | Timoteo, Jandrei | Waje, Christian
 
 ## Link(s)
 
 https://pure-anchorage-91977-4dec50670cac.herokuapp.com/ (link to deployed application)
-
 https://github.com/ravensandcrows/social_media_platform (link to GitHub repository)
 
 ## Image(s)
 
 ![](./public/assets/images/social-media-landing.png)
+![](./public/assets/images/social-media-dashboard.png)

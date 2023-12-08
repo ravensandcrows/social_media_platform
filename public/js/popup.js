@@ -6,32 +6,32 @@ const signupPopup = document.getElementById("signupPopup")
 const signup = document.getElementById("signup")
 
 //POPUP FUNCTIONS
-function open_popup(){
+function open_popup() {
     popup.classList.add("open_popup");
     popup_background.classList.add("popup_container");
 }
 
-function joinPopup(){
+function joinPopup() {
     signupPopup.classList.add("open_popup");
     popup_background.classList.add("popup_container");
 }
 
-function closeJoin(){
+function closeJoin() {
     signupPopup.classList.remove("open_popup");
     popup_background.classList.remove("popup_container");
 }
 
-function close_popup(){
+function close_popup() {
     popup.classList.remove("open_popup");
     popup_background.classList.remove("popup_container");
 }
 
-login.addEventListener("click", ()=> {
+login.addEventListener("click", () => {
     open_popup();
     closeJoin();
 });
 
-signup.addEventListener("click", ()=> {
+signup.addEventListener("click", () => {
     joinPopup();
     close_popup();
 });

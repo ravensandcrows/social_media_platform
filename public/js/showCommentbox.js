@@ -1,4 +1,5 @@
-function showTextarea() {
-    var textarea = document.querySelector(".myTextarea");
+function showTextarea(button) {
+    var post = button.closest('.post');
+    var textarea = post.querySelector(".myTextarea");
     textarea.style.display = "block";
-}
+  }
