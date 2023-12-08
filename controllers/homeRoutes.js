@@ -4,13 +4,6 @@ const withAuth = require('../utils/loginAuth');
 
 router.get('/', async (req, res) => {
     try {
-        // const userData = await User.findAll({
-        //     attributes: { exclude: ['password']},
-        // });
-        
-        // // this maps the user data to remove Sequelize-specific methods and get a clean JS object
-        // const posts = userData.map((post) => post.get({ plain: true }));
-
         //renders dashboard
         res.render('homepage', {
             // posts,

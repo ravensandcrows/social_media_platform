@@ -2,7 +2,6 @@ let isLiked = false;
 let likeBtnEl = document.querySelectorAll('.likeBtn')
 
 async function liked(event) {
-  // let likeCount = parseInt(document.querySelector(".likeCount").textContent);
   let likeCount = event.target.parentElement.
     previousElementSibling.children[0].textContent
   console.log(likeCount);

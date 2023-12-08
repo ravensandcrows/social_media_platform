@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
-
 router.post('/', async (req, res) => {
     try {
         const commentData = await Comment.create({
@@ -15,7 +14,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-
 //this goes in the dashboard
 router.get('/', async (req, res) => {
     try {
@@ -25,7 +23,6 @@ router.get('/', async (req, res) => {
         res.status(500).json(err)
     }
 });
-
 
 router.get('/:id', async (req, res) => {
     try {
@@ -39,6 +36,5 @@ router.get('/:id', async (req, res) => {
         res.status(500).json(err)
     }
 });
-
 
 module.exports = router;

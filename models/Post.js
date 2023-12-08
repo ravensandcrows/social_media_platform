@@ -29,14 +29,6 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
-        latitude: {
-            type: DataTypes.FLOAT,
-            allowNull: true,
-        },
-        longitude: {
-            type: DataTypes.FLOAT,
-            allowNull: true,
-        },
         location: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -62,3 +54,12 @@ Post.init(
 
 
 module.exports = Post;
+
+// latitude: {
+//     type: DataTypes.FLOAT,
+//     allowNull: true,
+// },
+// longitude: {
+//     type: DataTypes.FLOAT,
+//     allowNull: true,
+// }

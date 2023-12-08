@@ -1,6 +1,6 @@
 const commentFormHandler = async (event) => {
     event.preventDefault();
-    
+
     const description = document.querySelector(`[data-description='${event.target.id}']`).value;
     const post_id = event.target.id;
 
@@ -15,7 +15,6 @@ const commentFormHandler = async (event) => {
         })
 
         if (response.ok) {
-            alert('Looks like this worked!');
             document.location.reload();
         } else {
             alert('Please try again');
@@ -24,7 +23,7 @@ const commentFormHandler = async (event) => {
 };
 
 const commentButton = document.querySelectorAll('.comment-button');
-for (var i=0; i < commentButton.length; i++) {
+for (var i = 0; i < commentButton.length; i++) {
     commentButton[i].addEventListener('click', commentFormHandler);
 };
 
