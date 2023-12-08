@@ -204,6 +204,18 @@ input[type="radio"] {
     text-align: center;
 }
 
+.delete-button{
+    font-size: 300%;
+    cursor: pointer;
+    border:none;
+    /* margin-right: 3%; */
+    padding: 10px 20px;
+    background-color: transparent;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+
 .comment-button:active{
     color:cornflowerblue;
 }
