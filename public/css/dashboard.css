@@ -193,7 +193,7 @@ input[type="radio"] {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-.commentBtn{
+.comment-button{
     font-size: 300%;
     cursor: pointer;
     border:none;
@@ -204,7 +204,7 @@ input[type="radio"] {
     text-align: center;
 }
 
-.commentBtn:active{
+.comment-button:active{
     color:cornflowerblue;
 }
 
