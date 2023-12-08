@@ -4,22 +4,22 @@ const userData = [
     {
         "username": "chrisw",
         "email": "christian@gmail.com",
-        "password": "qwert12345"
+        "password": "christianw"
     },
     {
-        "username": "jandreit",
+        "username": "dreit",
         "email": "jandrei@gmail.com",
-        "password": "12345qwert"
+        "password": "jandreit"
     },
     {
         "username": "kalib",
         "email": "kali@hotmail.com",
-        "password": "poiuy09876"
+        "password": "kaliblack"
     },
     {
         "username": "irim",
         "email": "irina@hotmail.com",
-        "password": "09876poiuy"
+        "password": "irimeroi"
     }
 ];
 
